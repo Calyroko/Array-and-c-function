@@ -1,0 +1,57 @@
+/* Function to calculate the bill 
+author : caleb maroko
+date : 16-10-24
+*/
+#include <stdio.h>
+
+float calculate_bill(float units_consumed) {
+    float charge_per_unit;
+    float bill_amount;
+
+    if (units_consumed <= 199) {
+        charge_per_unit = 1.20;
+    } else if (units_consumed < 400) {
+        charge_per_unit = 1.50;
+    } else if (units_consumed < 600) {
+        charge_per_unit = 1.80;
+    } else {
+        charge_per_unit = 2.00;
+    }
+
+    bill_amount = units_consumed * charge_per_unit;
+    return bill_amount;
+}
+
+int main() {
+    int customerID;
+    float unitsConsumed; 
+    char customerName[50];  
+    float total_bill, surcharge = 0.0;
+    printf("Enter Customer ID: ");
+    scanf("%d", &customerID);
+
+    printf("Enter Customer Name: ");
+    scanf(" %[^\n]s", customerName); 
+
+    printf("Enter Units Consumed: ");
+    scanf("%f", &unitsConsumed); 
+    total_bill = calculate_bill(unitsConsumed);
+
+    if (total_bill > 400) {
+        surcharge = total_bill * 0.15;
+    }
+
+    if (total_bill < 100) {
+        total_bill = 100; 
+    } else {
+        total_bill += surcharge;
+    }
+    printf("\nCustomer ID: %d\n", customerID);
+    printf("Customer Name: %s\n", customerName);
+    printf("Units Consumed: %.2f\n", unitsConsumed); 
+    printf("Charges per Unit: %.2f\n", total_bill / unitsConsumed); 
+    printf("Total Amount to Pay: %.2f\n", total_bill);
+
+    return 0;
+}
+

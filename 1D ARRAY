@@ -1,0 +1,16 @@
+/*    1D array
+author : caleb maroko
+date : 16-10-24
+*/
+# include <stdio.h>
+int main ()
+{
+    int marks[4] = {40,20,30,10};
+    printf("marks of caleb :%d\n",marks[0]);
+    printf("marks of tonny :%d\n",marks[1]);
+    printf("marks of davy :%d\n",marks[2]);
+    printf("marks of joshua :%d\n",marks[3]);
+    
+    return 0;
+}
+    

@@ -1,0 +1,18 @@
+/* 2D ARRAY
+   Author : Caleb Maroko
+   Date : 16 - 10 - 24
+*/
+#include <stdio.h>
+
+int main() {
+    int marks[2][3] = {{1, 2, 3}, {2, 3, 4}};
+    int x, j;
+
+    for (x = 0; x < 2; ++x) {
+        for (j = 0; j < 3; ++j) {
+            printf("marks[%d][%d] = %d\n", x, j, marks[x][j]);
+        }
+    }
+
+    return 0;
+}

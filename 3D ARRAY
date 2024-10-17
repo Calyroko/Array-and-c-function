@@ -1,0 +1,22 @@
+/* 3D ARRAY
+author : caleb maroko
+date : 16-10-24
+*/
+
+#include <stdio.h>
+int main()
+{
+    int x;
+    int j;
+    int n;
+    int marks[2][2][3]={{{1,2,3},{2,3,4}},{{2,3,4},{3,4,5}}};
+    for(x=0;x<2;++x){
+        for(j=0;j<2;++j){
+            for(n=0;n<3;++n){
+    printf("marks[%d][%d][%d]=%d\n",x,j,n, marks [x][j][n]);
+            }
+}  
+}  
+        
+                return 0;
+}
